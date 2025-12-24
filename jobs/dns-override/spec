@@ -1,0 +1,9 @@
+name: dns-override
+properties:
+  dns.servers:
+    description: "List of DNS servers"
+    type: array
+  dns.search:
+    description: "DNS search domains"
+    type: array
+    default: []

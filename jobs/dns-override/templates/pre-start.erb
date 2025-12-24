@@ -1,0 +1,27 @@
+#!/bin/bash
+set -euxo pipefail
+
+RESOLV_CONF="/etc/resolv.conf"
+
+# Remove symlink if present
+if [ -L "$RESOLV_CONF" ]; then
+  rm -f "$RESOLV_CONF"
+fi
+
+# Build resolv.conf
+{
+<% p('dns.search').each do |domain| %>
+  echo "search <%= domain %>"
+<% end %>
+
+<% p('dns.servers').each do |server| %>
+  echo "nameserver <%= server %>"
+<% end %>
+} > "$RESOLV_CONF"
+
+chmod 644 "$RESOLV_CONF"
+
+# Optional but strongly recommended:
+# Prevent system components from overwriting resolv.conf
+chattr +i "$RESOLV_CONF" || true
+
