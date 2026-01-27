@@ -1,1 +1,7 @@
+---
 name: dns-override
+
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/dns-override-blobs

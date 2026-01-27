@@ -1,7 +1,7 @@
 name: dns-override
-version: 0+dev.1
-commit_hash: 10b8b4e
-uncommitted_changes: false
+version: "2"
+commit_hash: 2374d59
+uncommitted_changes: true
 jobs:
 - name: dns-override
   version: 5f264e05e04b0a3328adbae7cce61446ec9ba86fb56ff027a235e2dfb38bff25
