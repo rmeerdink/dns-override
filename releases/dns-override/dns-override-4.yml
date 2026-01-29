@@ -1,0 +1,10 @@
+name: dns-override
+version: "4"
+commit_hash: 116713d
+uncommitted_changes: false
+jobs:
+- name: dns-override
+  version: 80fb2ccc8aabda354177ae2f6a60d85f84424ffa5ccd08ef9b5deeddd2d38c75
+  fingerprint: 80fb2ccc8aabda354177ae2f6a60d85f84424ffa5ccd08ef9b5deeddd2d38c75
+  sha1: sha256:8fd79bf5de3a828f72d9cde1c3ccefe0465992f86ca4f0f28b5cf418f7139806
+  packages: []
