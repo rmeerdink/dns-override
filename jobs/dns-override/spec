@@ -1,9 +1,4 @@
 name: dns-override
-
-properties:
-  dns:
-    description: DNS settings
-    default:
-      servers: []
-      search: []
-
+templates:
+  pre-start.erb: bin/pre-start
+packages: []
