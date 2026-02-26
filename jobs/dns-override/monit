@@ -1,0 +1,3 @@
+check process dns-override with pidfile /var/vcap/sys/run/dns-override.pid
+  start "/bin/true"
+  stop "/bin/true"
