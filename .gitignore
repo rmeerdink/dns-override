@@ -3,7 +3,7 @@ blobs
 dev_releases
 releases/*.tgz
 src/bbr
-.dev_builds
+.dev_builds/*
 .final_builds
 .DS_Store
 .idea
