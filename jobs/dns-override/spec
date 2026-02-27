@@ -1,4 +1,8 @@
 name: dns-override
+properties:
+  dns_override.nameservers:
+    description: "List of nameservers to inject into /etc/resolv.conf"
+    default: []
 templates:
   pre-start.erb: bin/pre-start
 packages: []

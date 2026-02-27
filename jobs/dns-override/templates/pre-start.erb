@@ -1,13 +1,18 @@
 #!/bin/bash
 set -eux
+
 if systemctl is-active --quiet systemd-resolved; then
   systemctl stop systemd-resolved || true
   systemctl disable systemd-resolved || true
 fi
+
 rm -f /etc/resolv.conf
+
 cat > /etc/resolv.conf <<EOF
-nameserver 10.65.65.65
-nameserver 10.65.65.64
+<% p('dns_override.nameservers').each do |ns| %>
+nameserver <%= ns %>
+<% end %>
 search .
 EOF
+
 chmod 644 /etc/resolv.conf
