@@ -3,7 +3,7 @@ Repo in use to fix broken DNS implementation with the Bosh Noble stemcell
 
 ## Operator file
 
-This is the operator file we have in use by our bosh-deployment
+This is the operator file we have in use by our bosh-deployment to make of this release
 
 ```yaml
 # This ops-file ensures Noble stemcells (Ubuntu 24.04) have correct DNS configuration
